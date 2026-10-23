@@ -5,7 +5,7 @@ test('homepage sections are separate, navigation and local assets work', async (
   const errors = [];
   page.on('pageerror', error => errors.push(error.message));
   await page.goto('/');
-  await expect(page).toHaveTitle('Sushi Inn — Japanese Restaurant');
+  await expect(page).toHaveTitle('Sushi Inn Japanese Restaurant | Sushi & Menu');
   await expect(page.locator('h1')).toHaveText('Your sushispot.');
   const why = await page.locator('#why-us').boundingBox();
   const reviews = await page.locator('#reviews').boundingBox();
@@ -22,13 +22,13 @@ test('homepage sections are separate, navigation and local assets work', async (
       expect(body).toContain(`id="${url.hash.slice(1)}"`);
     }
   }
-  const asset = await page.request.get('/assets/images/sushi-sheet.png');
+  const asset = await page.request.get('/images/sushi-sheet.png');
   expect(asset.ok()).toBeTruthy();
   expect(asset.headers()['content-type']).toContain('image/png');
   expect(await page.locator('.hero-image').evaluate(el => getComputedStyle(el).backgroundImage)).toContain('sushi-sheet.png');
   await page.screenshot({ path: 'test-results/home-desktop.png', fullPage: true });
   await page.getByRole('link', { name: 'View the menu', exact: true }).click();
-  await expect(page).toHaveTitle('Menu — Sushi Inn');
+  await expect(page).toHaveTitle('Sushi Menu | Sushi Inn Japanese Restaurant');
   await expect(page.locator('.menu-item:visible')).toHaveCount(8);
   for (const [label, count] of [['Rolls', 3], ['Nigiri', 2], ['Sashimi', 1], ['Sides', 2], ['All', 8]]) {
     await page.getByRole('button', { name: label, exact: true }).click();
@@ -72,4 +72,35 @@ test('mobile navigation, keyboard, favorites, and narrow layouts work', async ({
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto('/');
   await page.screenshot({ path: 'test-results/home-mobile.png', fullPage: true });
+});
+
+test('search metadata is consistent and avoids unverified business facts', async ({ page }) => {
+  const base = 'https://mapal-27.github.io/Website/';
+  const titles = new Set();
+  for (const [path, canonical] of [['/', base], ['/menu.html', base + 'menu.html']]) {
+    await page.goto(path);
+    titles.add(await page.title());
+    await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href', canonical);
+    await expect(page.locator('meta[property="og:url"]')).toHaveAttribute('content', canonical);
+    await expect(page.locator('meta[name="description"]')).toHaveAttribute('content', /Sushi Inn/);
+    const schema = JSON.parse(await page.locator('script[type="application/ld+json"]').textContent());
+    const restaurant = schema['@graph'].find(entity => entity['@type'] === 'Restaurant');
+    expect(restaurant.name).toBe('Sushi Inn Japanese Restaurant');
+    expect(restaurant.hasMenu).toBe(base + 'menu.html');
+    expect(restaurant).not.toHaveProperty('aggregateRating');
+    expect(restaurant).not.toHaveProperty('address');
+    const socialImage = await page.locator('meta[property="og:image"]').getAttribute('content');
+    const image = await page.request.get(new URL(socialImage).pathname.replace('/Website', ''));
+    expect(image.headers()['content-type']).toContain('image/png');
+  }
+  expect(titles.size).toBe(2);
+  const sitemap = await page.request.get('/sitemap.xml');
+  expect(sitemap.ok()).toBeTruthy();
+  const xml = await sitemap.text();
+  expect(xml).toContain(`<loc>${base}</loc>`);
+  expect(xml).toContain(`<loc>${base}menu.html</loc>`);
+  const robots = await page.request.get('/robots.txt');
+  expect(await robots.text()).toContain('Sitemap: ' + base + 'sitemap.xml');
+  const llms = await page.request.get('/llms.txt');
+  expect(await llms.text()).toContain('Menu items, ingredients, availability, and prices have not been confirmed.');
 });

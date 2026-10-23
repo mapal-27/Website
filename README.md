@@ -50,3 +50,17 @@ No reservation, ordering, payment, analytics, or contact-form backend is include
 - `template/`: upstream template and license, retained for provenance; not served in production.
 
 All fonts, styles, icons, and food imagery are local. Visitors do not need a third-party CDN.
+
+## Search and AI discovery
+
+Both pages include distinct titles and descriptions, canonical URLs, Open Graph/Twitter previews, and JSON-LD linking the Restaurant, WebSite, and WebPage entities. The menu also includes breadcrumbs. `public/sitemap.xml` lists both pages. `public/robots.txt` permits crawling, and `public/llms.txt` provides an optional, experimental summary for AI tools; support and visibility are not guaranteed. Content is rendered in HTML, so reading the menu does not require JavaScript.
+
+URLs currently target `https://mapal-27.github.io/Website/`. Update canonical, social, JSON-LD, sitemap, robots, and llms URLs if hosting or the domain changes. GitHub Pages project sites cannot place a robots.txt at the account domain root; the sitemap can still be submitted directly in Search Console. `llms.txt` is also under the project path.
+
+Local SEO still needs the verified city, street address, phone, opening hours, and Google Business Profile URL. Do not invent them or add unverified aggregate ratings, prices, or location coordinates. Basic metadata does not guarantee indexing, rankings, rich results, or AI citations.
+
+## View the actual website on GitHub Pages
+
+The prepared `gh-pages` branch contains the built website. In the GitHub repository, open **Settings → Pages → Build and deployment**, choose **Deploy from a branch**, select **gh-pages** and **/(root)**, and Save. GitHub will show the published URL once deployment succeeds. The expected URL is `https://mapal-27.github.io/Website/`.
+
+After later source changes, run `npm ci && npm run build` and publish the contents of `dist/` to `gh-pages` again. Source code lives on `main`; do not point Pages at unbuilt Vite source on `main`.

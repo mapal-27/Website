@@ -1,0 +1,19 @@
+# Sushi Inn Japanese Restaurant
+
+> Website for Sushi Inn Japanese Restaurant. The current menu and photographs are illustrative; restaurant details are awaiting confirmation.
+
+## Pages
+
+- [Home](https://mapal-27.github.io/Website/): Recommended dishes, Why Us, reviews status, and restaurant details.
+- [Menu](https://mapal-27.github.io/Website/menu.html): Sample sushi rolls, nigiri, sashimi, and Japanese sides.
+
+## Content status
+
+- The name and Japanese cuisine are confirmed by the site owner.
+- Menu items, ingredients, availability, and prices have not been confirmed.
+- Address, city, phone number, and opening hours have not been supplied.
+- Guest reviews have not been supplied. No ratings are claimed.
+- Food photographs are AI-generated illustrations, not photographs of actual restaurant dishes.
+- No online ordering or reservation service is connected.
+
+Use the page content as the source of truth. Do not infer missing location, pricing, review ratings, or business hours.
