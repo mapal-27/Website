@@ -1,6 +1,6 @@
-import { createIcons, ArrowUpRight, ArrowRight, ArrowLeft, Menu, Fish, Utensils, UsersRound, MessageSquare, MapPin, Clock3, Phone, Sprout, Soup, Info } from 'lucide';
+import { createIcons, ArrowUpRight, ArrowRight, ArrowLeft, Menu, Fish, Utensils, UsersRound, MessageSquare, MapPin, Clock3, Phone, Sprout, Soup, Info, TrainFront } from 'lucide';
 
-createIcons({ icons: { ArrowUpRight, ArrowRight, ArrowLeft, Menu, Fish, Utensils, UsersRound, MessageSquare, MapPin, Clock3, Phone, Sprout, Soup, Info } });
+createIcons({ icons: { ArrowUpRight, ArrowRight, ArrowLeft, Menu, Fish, Utensils, UsersRound, MessageSquare, MapPin, Clock3, Phone, Sprout, Soup, Info, TrainFront } });
 
 document.querySelectorAll('[data-year]').forEach(el => { el.textContent = String(new Date().getFullYear()); });
 const toggle = document.querySelector('.nav-toggle');
@@ -37,3 +37,15 @@ function filterMenu(category, updateURL = false) {
 }
 filters.forEach(button => button.addEventListener('click', () => filterMenu(button.dataset.filter, true)));
 if (filters.length) filterMenu(new URLSearchParams(location.search).get('category'));
+
+const mapButton = document.querySelector('[data-load-map]');
+mapButton?.addEventListener('click', () => {
+  const frame = document.createElement('iframe');
+  frame.title = 'Sushi Den at 609 Abbott St, Vancouver';
+  frame.src = 'https://www.google.com/maps?q=Sushi+Den+609+Abbott+St+Vancouver+BC&output=embed';
+  frame.referrerPolicy = 'no-referrer-when-downgrade';
+  frame.allowFullscreen = true;
+  frame.tabIndex = 0;
+  document.querySelector('[data-map-panel]').replaceChildren(frame);
+  frame.focus();
+});

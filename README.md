@@ -31,15 +31,13 @@ If Chromium is already installed, use `PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/
 
 Tests start their own local development server and verify menu navigation, filters, mobile navigation, section layout, keyboard access, and local links/assets. Screenshots are captured in the test results directory.
 
-## Replace sample content before publishing
+## Business content
 
-- Confirm dishes, ingredients, prices, and availability in `menu.html` and favorites in `index.html`.
-- Add the restaurant address, phone, and hours in `index.html`.
-- Replace the honest reviews placeholder with real customer reviews used with permission.
-- Confirm the suggested Why Us copy with the restaurant.
-- Photography is AI-generated and illustrative, not photography of this restaurant's actual food. Replace `assets/images/sushi-sheet.png` with real food photographs when available. CSS displays its four quadrants; side dishes currently use Lucide icons.
+Personalized for Sushi Den, 609 Abbott St, Vancouver, using the restaurant data supplied by the site owner. The site includes takeout phone links, supplied operating hours, SkyTrain directions, optional click-to-load Google Maps, and a Google reviews link. No API key is required for the map. An internet connection is needed to load the external map and Google listing.
 
-No reservation, ordering, payment, analytics, or contact-form backend is included. The main action is browsing the menu.
+The separate menu page contains eight selected menu highlights and sample CAD prices, with a prompt to call for current details and the full menu. The mobile Menu/Call bar stays available while scrolling. See `CONTENT-SOURCES.md` for provenance and remaining content limitations. Photos remain AI-generated illustrations and should be replaced with actual restaurant photos when available.
+
+No reservation, ordering, payment, analytics, or contact-form backend is included. Customers call the restaurant to order or reserve.
 
 ## Files
 
@@ -49,7 +47,7 @@ No reservation, ordering, payment, analytics, or contact-form backend is include
 - `main.js`: accessible mobile navigation, menu filters, and icons.
 - `template/`: upstream template and license, retained for provenance; not served in production.
 
-All fonts, styles, icons, and food imagery are local. Visitors do not need a third-party CDN.
+Fonts, styles, icons, and food imagery are local. Google Maps is loaded only when a visitor selects Show location on map. The listing, reviews, and directions links open external Google services.
 
 ## Search and AI discovery
 
@@ -57,7 +55,7 @@ Both pages include distinct titles and descriptions, canonical URLs, Open Graph/
 
 URLs currently target `https://mapal-27.github.io/Website/`. Update canonical, social, JSON-LD, sitemap, robots, and llms URLs if hosting or the domain changes. GitHub Pages project sites cannot place a robots.txt at the account domain root; the sitemap can still be submitted directly in Search Console. `llms.txt` is also under the project path.
 
-Local SEO still needs the verified city, street address, phone, opening hours, and Google Business Profile URL. Do not invent them or add unverified aggregate ratings, prices, or location coordinates. Basic metadata does not guarantee indexing, rankings, rich results, or AI citations.
+Local structured data includes the supplied Vancouver address, phone, regular hours, and Google listing link. Holiday hours are displayed in the page copy as supplied. No unverified aggregate ratings, live offers, or location coordinates are added. Basic metadata does not guarantee indexing, rankings, rich results, or AI citations.
 
 ## View the actual website on GitHub Pages
 
