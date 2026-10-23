@@ -1,26 +1,29 @@
-# Sushi Den — Vancouver
+# Kwao Thai Restaurant — Website Concept
 
-> A casual Japanese restaurant at 609 Abbott St, near Stadium–Chinatown SkyTrain Station in Vancouver, British Columbia.
+> A design concept reusing our restaurant template. This is not the restaurant's official website.
+
+## Sources
+
+The site owner supplied copied homepage text and a screenshot from https://www.kwaothai.com on October 23, 2026. The source website was not independently retrieved in this environment.
+
+## Supplied business information
+
+- Name: Kwao Thai Restaurant.
+- Address: 1207 A Esquimalt Road, Victoria, BC V9A 3P2, Canada.
+- Phone: +1 250-389-1845.
+- Tuesday–Sunday: lunch 11:00–14:30 and dinner 16:30–21:00, local Victoria time.
+- Closed Monday. The supplied screenshot also says all statutory holidays are closed.
+- Dine-in and takeout are available. Allow 30–35 minutes for preparation; confirm timing by phone.
+- Online ordering links are on the restaurant's official website. Delivery is listed through DoorDash and Localpass. Direct checkout links were not supplied.
+- Available spice levels: Mild, Mild-Med, Med, Hot, Thai Hot.
+- Vegetarian and vegan options are available. Customers should disclose allergies when ordering and confirm preparation.
 
 ## Pages
 
-- [Home](https://mapal-27.github.io/Website/): Takeout phone, menu favorites, Why Us, Google reviews link, hours, and directions.
-- [Menu highlights](https://mapal-27.github.io/Website/menu.html): Selected rolls, combos, and house specials with sample prices in Canadian dollars.
-- [Google listing supplied by the site owner](https://share.google/jNB8fL5ygfavLDCf1)
+- [Concept homepage](https://mapal-27.github.io/Website/kwao-thai/)
+- [Menu and ordering guide](https://mapal-27.github.io/Website/kwao-thai/menu.html)
+- [Official restaurant website](https://www.kwaothai.com)
 
-## Business details
+## Limitations
 
-- Name: Sushi Den.
-- Address: 609 Abbott St, Vancouver, BC V6B 0J4, Canada.
-- Phone: +1 604-687-4422. Call for takeout, reservations, and pickup timing.
-- Hours: Monday–Saturday 11:00–22:00; Sundays and holidays 12:00–22:00, local Vancouver time.
-- Positioning: Casual neighborhood sushi, generous portions, convenient takeout near the SkyTrain.
-- Vegetarian options are available; ask the restaurant about gluten-free alternatives and preparation.
-
-## Menu highlights
-
-Sample prices in CAD, not live quotes: California Roll $4.50; Dynamite Roll $5.50; Spicy Salmon Roll $4.00; Yam Roll $6.00; Roll & Nigiri Combo $19.50; Sashimi & Roll Combo $15.00; Dinner for Two Combo $28.00. Red Dragon Roll price is not supplied. Call to confirm current prices, ingredients, availability, and the full menu.
-
-## Sources and limitations
-
-Business information and menu highlights were supplied by the site owner on October 23, 2026; they were not independently checked against the restaurant's website because research access was blocked. Food images are AI-generated illustrations. No review rating, customer quotation, guaranteed ten-minute pickup, or complimentary tea/soup offer is asserted. No online checkout or reservation system is connected. Read reviews and listing updates on Google. The menu is available directly as an HTML page; no PDF viewer or download is needed.
+No dish names, prices, full menu, customer review text, review ratings, email address, or direct ordering-provider URLs were supplied. None are invented here. Illustrative Thai cuisine photos are AI-generated and do not depict confirmed Kwao Thai dishes. The menu page links to the official website for current menu information. This concept is marked noindex pending review; it is not intended to compete with the official site in search results.

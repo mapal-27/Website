@@ -1,19 +1,13 @@
-# Sushi Den content sources
+# Kwao Thai content sources
 
-Updated October 23, 2026.
+The user provided https://www.kwaothai.com, copied homepage text, and a screenshot on October 23, 2026. Network policy blocked fetching the website; no independent web verification is claimed.
 
-The site owner supplied the Vancouver business data and content framework in this conversation: Sushi Den, 609 Abbott St, Vancouver, BC V6B 0J4; +1 604-687-4422; Monday–Saturday 11 AM–10 PM; Sundays and holidays noon–10 PM. The address, phone, hours, local context, positioning, and eight menu highlights were used as supplied. These facts were not independently retrieved or verified online by the developer.
+Phone, address, split lunch/dinner hours, Tuesday–Sunday schedule, dine-in/takeout options, 30–35-minute preparation estimate, DoorDash/Localpass availability, and five spice levels come from the copied text. Closed statutory holidays and vegetarian/vegan availability are visible in the supplied screenshot. The 30–35-minute estimate is presented as a preparation allowance, not a guaranteed pickup countdown.
 
-The owner supplied this Google listing: https://share.google/jNB8fL5ygfavLDCf1. Environment network restrictions prevented opening it. It is linked for visitors to view current listing information and reviews. The directions link and optional map use the supplied restaurant name and street address. They do not use invented coordinates, an invented Place ID, a Maps API key, or a backend.
+No menu dishes/prices, review quotations/ratings, usable logo image file, email, direct checkout links, or provider-specific ordering URLs were supplied. The site does not invent these. It links to the official homepage for the menu and online-ordering links. The Reviews section points to a Google Maps search using the known name and address and does not claim a verified Google Place ID. The optional map uses the supplied address, with no invented coordinates or API key.
 
-The menu dataset explicitly labels its prices as sample CAD prices. The website preserves that qualification and directs customers to call for current pricing, ingredients, the full menu, and pickup timing. Red Dragon Roll has no supplied price and says "Call for price." The website shows eight selected highlights rather than claiming to reproduce the complete restaurant menu.
+The generic Thai cuisine photos are AI-generated illustrations, explicitly labeled on the site. They are not extracted restaurant photos or claims about actual menu items. The outdated Thanksgiving greeting and incorrect Wix/Luna Tapas footer were omitted. The text wordmark is an independent concept; the original logo was not copied.
 
-No customer testimonials or aggregate ratings were supplied. The Reviews section links to Google instead of inventing quotations. Vegetarian availability and gluten-free alternatives use the owner's supplied description; customers are directed to confirm preparation and allergy details with the restaurant.
+This is a review concept, visibly labeled and marked noindex. SEO titles, social previews, structured business information, and an AI-readable summary are prepared accurately from the supplied content. Enable indexing and replace canonical URLs only when publishing an approved production site.
 
-The proposed guaranteed ten-minute pickup widget and free tea/miso promotion were not implemented as facts. No service counter, live availability, current open/closed indicator, ordering checkout, or reservations system is implied. Holiday hours are displayed as supplied; date-specific holiday exceptions are not invented in structured data.
-
-Existing food photos are AI-generated and illustrative. They are labeled as such and are not represented as photos of Sushi Den's actual dishes. The layout keeps the owner's requested minimal style and separate stacked Why Us and Reviews sections.
-
-## Menu format
-
-At the owner's request, the site uses its own responsive HTML menu page, with no PDF links or download requirements. The supplied external menu PDF could not be retrieved, so the eight highlights and sample CAD prices still come from the owner's written dataset; they have not been checked against the PDF. No complete restaurant menu has been invented.
+Sushi Den code is preserved on the `sushi-den` branch, and its existing live files stay at the root of `gh-pages`. Kwao Thai source is isolated on `kwao-thai`; its built preview is added under `kwao-thai/` on `gh-pages`.
