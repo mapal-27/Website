@@ -14,6 +14,6 @@ The proposed guaranteed ten-minute pickup widget and free tea/miso promotion wer
 
 Existing food photos are AI-generated and illustrative. They are labeled as such and are not represented as photos of Sushi Den's actual dishes. The layout keeps the owner's requested minimal style and separate stacked Why Us and Reviews sections.
 
-## Restaurant menu PDF
+## Menu format
 
-The site owner supplied http://sushiden.tossed.org/sushiden_menu.pdf as the restaurant’s actual menu. It is linked prominently on the menu page and from the homepage favorites section, and included alongside the HTML menu highlights in Restaurant structured data. Both HTTP and HTTPS retrieval were blocked by the environment network policy. The document has not been downloaded, inspected, or transcribed; existing card prices remain explicitly sample prices. Uploading the PDF is required to transcribe its contents accurately without network access. No claim is made about the PDF’s freshness or availability to visitors.
+At the owner's request, the site uses its own responsive HTML menu page, with no PDF links or download requirements. The supplied external menu PDF could not be retrieved, so the eight highlights and sample CAD prices still come from the owner's written dataset; they have not been checked against the PDF. No complete restaurant menu has been invented.

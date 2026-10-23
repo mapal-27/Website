@@ -8,8 +8,6 @@
 - [Menu highlights](https://mapal-27.github.io/Website/menu.html): Selected rolls, combos, and house specials with sample prices in Canadian dollars.
 - [Google listing supplied by the site owner](https://share.google/jNB8fL5ygfavLDCf1)
 
-- [Restaurant menu PDF supplied by the site owner](http://sushiden.tossed.org/sushiden_menu.pdf): Original restaurant menu document; not retrieved or transcribed in this build.
-
 ## Business details
 
 - Name: Sushi Den.
@@ -25,4 +23,4 @@ Sample prices in CAD, not live quotes: California Roll $4.50; Dynamite Roll $5.5
 
 ## Sources and limitations
 
-Business information and menu highlights were supplied by the site owner on October 23, 2026; they were not independently checked against the restaurant's website because research access was blocked. Food images are AI-generated illustrations. No review rating, customer quotation, guaranteed ten-minute pickup, or complimentary tea/soup offer is asserted. No online checkout or reservation system is connected. Read reviews and listing updates on Google. The original menu PDF is linked on the website; its contents have not been read or used to verify the sample prices.
+Business information and menu highlights were supplied by the site owner on October 23, 2026; they were not independently checked against the restaurant's website because research access was blocked. Food images are AI-generated illustrations. No review rating, customer quotation, guaranteed ten-minute pickup, or complimentary tea/soup offer is asserted. No online checkout or reservation system is connected. Read reviews and listing updates on Google. The menu is available directly as an HTML page; no PDF viewer or download is needed.

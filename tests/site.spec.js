@@ -87,8 +87,7 @@ test('search metadata is consistent and avoids unverified business facts', async
     const schema = JSON.parse(await page.locator('script[type="application/ld+json"]').textContent());
     const restaurant = schema['@graph'].find(entity => entity['@type'] === 'Restaurant');
     expect(restaurant.name).toBe('Sushi Den');
-    expect(restaurant.hasMenu).toContain(base + 'menu.html');
-    expect(restaurant.hasMenu).toContain('http://sushiden.tossed.org/sushiden_menu.pdf');
+    expect(restaurant.hasMenu).toBe(base + 'menu.html');
     expect(restaurant).not.toHaveProperty('aggregateRating');
     expect(restaurant.address.streetAddress).toBe('609 Abbott St');
     expect(restaurant.address.addressLocality).toBe('Vancouver');
@@ -137,13 +136,11 @@ test('Vancouver contact details and mobile takeout controls are actionable', asy
 });
 
 
-test('the restaurant PDF is linked without presenting sample prices as verified', async ({ page }) => {
+test('the menu is browsable directly without PDF links', async ({ page }) => {
   for (const path of ['/', '/menu.html']) {
     await page.goto(path);
-    const link = page.getByRole('link', { name: /Open restaurant menu \(PDF\)/ });
-    await expect(link).toHaveAttribute('href', 'http://sushiden.tossed.org/sushiden_menu.pdf');
-    await expect(link).toHaveAttribute('target', '_blank');
-    await expect(link).toHaveAttribute('rel', 'noopener noreferrer');
+    await expect(page.locator('a[href*=".pdf"]')).toHaveCount(0);
   }
   await expect(page.locator('.menu-note')).toContainText('sample CAD prices');
+  await expect(page.locator('.menu-item:visible')).toHaveCount(8);
 });
