@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Explore the Sushi Inn sample menu, including sushi rolls, nigiri, sashimi, and sides."><meta name="theme-color" content="#f7f5ef"><title>Menu — Sushi Inn</title><link rel="icon" href="./assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="./styles.css"></head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><div class="container header-inner"><a class="brand" href="./index.html" aria-label="Sushi Inn home">Sushi Inn<span>Japanese Restaurant</span></a><button class="nav-toggle" type="button" aria-expanded="false" aria-controls="navigation" aria-label="Open navigation"><i data-lucide="menu" aria-hidden="true"></i></button><nav id="navigation" class="site-nav" aria-label="Main navigation"><a href="./index.html">Home</a><a href="./index.html#why-us">Why us</a><a href="./index.html#reviews">Reviews</a><a href="./index.html#visit">Visit</a><a class="btn btn-primary" href="./menu.html" aria-current="page">View menu <i data-lucide="arrow-up-right" aria-hidden="true"></i></a></nav></div></header>
+<main id="main" class="container menu-main">
+  <div class="menu-heading"><a class="text-link back-link" href="./index.html"><i data-lucide="arrow-left" aria-hidden="true"></i> Back to home</a><h1>The menu.</h1><p>Find something you’ll love.</p></div>
+  <div class="menu-filters" role="group" aria-label="Filter menu by category"><button type="button" class="filter-button active" data-filter="all" aria-pressed="true">All</button><button type="button" class="filter-button" data-filter="rolls" aria-pressed="false">Rolls</button><button type="button" class="filter-button" data-filter="nigiri" aria-pressed="false">Nigiri</button><button type="button" class="filter-button" data-filter="sashimi" aria-pressed="false">Sashimi</button><button type="button" class="filter-button" data-filter="sides" aria-pressed="false">Sides</button></div>
+  <p class="content-note menu-note">Sample menu · Items, ingredients, and prices to be confirmed.</p>
+  <p class="visually-hidden" id="menu-status" role="status" aria-live="polite"></p>
+  <div class="row g-4 g-lg-5 menu-grid">
+    <article class="col-sm-6 col-lg-4 menu-item" data-category="rolls"><div class="food-photo photo-platter" role="img" aria-label="Illustrative sushi rolls"></div><h2>California roll</h2><p>Crab-style filling, avocado, cucumber.</p></article>
+    <article class="col-sm-6 col-lg-4 menu-item" data-category="rolls"><div class="food-photo photo-dragon" role="img" aria-label="Illustrative sushi roll"></div><h2>Spicy tuna roll</h2><p>Tuna, spicy mayo, cucumber.</p></article>
+    <article class="col-sm-6 col-lg-4 menu-item" data-category="rolls"><div class="food-photo photo-dragon" role="img" aria-label="Illustrative dragon roll"></div><h2>Dragon roll</h2><p>Avocado, tempura-style filling, sesame.</p></article>
+    <article class="col-sm-6 col-lg-4 menu-item" data-category="nigiri"><div class="food-photo photo-salmon" role="img" aria-label="Illustrative salmon nigiri"></div><h2>Salmon nigiri</h2><p>Salmon over seasoned rice.</p></article>
+    <article class="col-sm-6 col-lg-4 menu-item" data-category="nigiri"><div class="food-photo photo-platter" role="img" aria-label="Illustrative assorted nigiri"></div><h2>Tuna nigiri</h2><p>Tuna over seasoned rice.</p></article>
+    <article class="col-sm-6 col-lg-4 menu-item" data-category="sashimi"><div class="food-photo photo-sashimi" role="img" aria-label="Illustrative sashimi set"></div><h2>Sashimi set</h2><p>A selection of sliced fish.</p></article>
+    <article class="col-sm-6 col-lg-4 menu-item side-dish" data-category="sides"><div class="side-art"><i data-lucide="sprout" aria-hidden="true"></i></div><h2>Edamame</h2><p>Soybeans with a little sea salt.</p></article>
+    <article class="col-sm-6 col-lg-4 menu-item side-dish" data-category="sides"><div class="side-art"><i data-lucide="soup" aria-hidden="true"></i></div><h2>Miso soup</h2><p>Miso broth, tofu, seaweed.</p></article>
+  </div>
+  <aside class="allergen-note"><i data-lucide="info" aria-hidden="true"></i><p>Have a food allergy? Confirm ingredients and preparation with the restaurant before ordering.</p></aside>
+</main>
+<footer class="site-footer"><div class="container footer-inner"><a class="brand" href="./index.html">Sushi Inn<span>Japanese Restaurant</span></a><nav aria-label="Footer navigation"><a href="./index.html">Home</a><a href="./index.html#reviews">Reviews</a><a href="./index.html#visit">Visit</a></nav><p>© <span data-year>2026</span> Sushi Inn</p></div></footer>
+<script type="module" src="./main.js"></script>
+</body></html>
