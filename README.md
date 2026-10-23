@@ -35,14 +35,14 @@ Tests start their own local development server and verify menu navigation, filte
 
 Personalized for Sushi Den, 609 Abbott St, Vancouver, using the restaurant data supplied by the site owner. The site includes takeout phone links, supplied operating hours, SkyTrain directions, optional click-to-load Google Maps, and a Google reviews link. No API key is required for the map. An internet connection is needed to load the external map and Google listing.
 
-The separate menu page contains eight selected menu highlights and sample CAD prices, with a prompt to call for current details and the full menu. The mobile Menu/Call bar stays available while scrolling. See `CONTENT-SOURCES.md` for provenance and remaining content limitations. Photos remain AI-generated illustrations and should be replaced with actual restaurant photos when available.
+The separate menu page links to the restaurant’s original menu PDF and contains eight selected highlights with clearly labeled sample CAD prices. PDF transcription is pending because the supplied host is blocked from this environment. The mobile Menu/Call bar stays available while scrolling. See `CONTENT-SOURCES.md` for provenance and remaining content limitations. Photos remain AI-generated illustrations and should be replaced with actual restaurant photos when available.
 
 No reservation, ordering, payment, analytics, or contact-form backend is included. Customers call the restaurant to order or reserve.
 
 ## Files
 
 - `index.html`: homepage, independent Why Us, Reviews, and Visit sections.
-- `menu.html`: sample full-menu page.
+- `menu.html`: menu highlights and link to the restaurant’s original PDF.
 - `styles.css`: restaurant styling and responsive layout.
 - `main.js`: accessible mobile navigation, menu filters, and icons.
 - `template/`: upstream template and license, retained for provenance; not served in production.

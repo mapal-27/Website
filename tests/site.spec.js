@@ -87,7 +87,8 @@ test('search metadata is consistent and avoids unverified business facts', async
     const schema = JSON.parse(await page.locator('script[type="application/ld+json"]').textContent());
     const restaurant = schema['@graph'].find(entity => entity['@type'] === 'Restaurant');
     expect(restaurant.name).toBe('Sushi Den');
-    expect(restaurant.hasMenu).toBe(base + 'menu.html');
+    expect(restaurant.hasMenu).toContain(base + 'menu.html');
+    expect(restaurant.hasMenu).toContain('http://sushiden.tossed.org/sushiden_menu.pdf');
     expect(restaurant).not.toHaveProperty('aggregateRating');
     expect(restaurant.address.streetAddress).toBe('609 Abbott St');
     expect(restaurant.address.addressLocality).toBe('Vancouver');
@@ -129,8 +130,20 @@ test('Vancouver contact details and mobile takeout controls are actionable', asy
   await expect(page.locator('iframe')).toHaveAttribute('src', /Sushi\+Den\+609\+Abbott/);
   await expect(page.locator('iframe')).toHaveAttribute('title', 'Sushi Den at 609 Abbott St, Vancouver');
   await actions.getByRole('link', { name: 'Menu', exact: true }).click();
-  await expect(page.locator('.menu-note')).toContainText('Sample prices in CAD');
+  await expect(page.locator('.menu-note')).toContainText('sample CAD prices');
   await expect(page.locator('.menu-item').filter({ hasText: 'California roll' })).toContainText('$4.50');
   await expect(page.locator('.menu-item').filter({ hasText: 'Red Dragon roll' })).toContainText('Call for price');
   await page.screenshot({ path: 'test-results/menu-vancouver-mobile.png', fullPage: true });
+});
+
+
+test('the restaurant PDF is linked without presenting sample prices as verified', async ({ page }) => {
+  for (const path of ['/', '/menu.html']) {
+    await page.goto(path);
+    const link = page.getByRole('link', { name: /Open restaurant menu \(PDF\)/ });
+    await expect(link).toHaveAttribute('href', 'http://sushiden.tossed.org/sushiden_menu.pdf');
+    await expect(link).toHaveAttribute('target', '_blank');
+    await expect(link).toHaveAttribute('rel', 'noopener noreferrer');
+  }
+  await expect(page.locator('.menu-note')).toContainText('sample CAD prices');
 });
