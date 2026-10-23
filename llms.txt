@@ -1,19 +1,26 @@
-# Sushi Den Japanese Restaurant
+# Sushi Den — Vancouver
 
-> Website for Sushi Den Japanese Restaurant. The current menu and photographs are illustrative; restaurant details are awaiting confirmation.
+> A casual Japanese restaurant at 609 Abbott St, near Stadium–Chinatown SkyTrain Station in Vancouver, British Columbia.
 
 ## Pages
 
-- [Home](https://mapal-27.github.io/Website/): Recommended dishes, Why Us, reviews status, and restaurant details.
-- [Menu](https://mapal-27.github.io/Website/menu.html): Sample sushi rolls, nigiri, sashimi, and Japanese sides.
+- [Home](https://mapal-27.github.io/Website/): Takeout phone, menu favorites, Why Us, Google reviews link, hours, and directions.
+- [Menu highlights](https://mapal-27.github.io/Website/menu.html): Selected rolls, combos, and house specials with sample prices in Canadian dollars.
+- [Google listing supplied by the site owner](https://share.google/jNB8fL5ygfavLDCf1)
 
-## Content status
+## Business details
 
-- The name and Japanese cuisine are confirmed by the site owner.
-- Menu items, ingredients, availability, and prices have not been confirmed.
-- Address, city, phone number, and opening hours have not been supplied.
-- Guest reviews have not been supplied. No ratings are claimed.
-- Food photographs are AI-generated illustrations, not photographs of actual restaurant dishes.
-- No online ordering or reservation service is connected.
+- Name: Sushi Den.
+- Address: 609 Abbott St, Vancouver, BC V6B 0J4, Canada.
+- Phone: +1 604-687-4422. Call for takeout, reservations, and pickup timing.
+- Hours: Monday–Saturday 11:00–22:00; Sundays and holidays 12:00–22:00, local Vancouver time.
+- Positioning: Casual neighborhood sushi, generous portions, convenient takeout near the SkyTrain.
+- Vegetarian options are available; ask the restaurant about gluten-free alternatives and preparation.
 
-Use the page content as the source of truth. Do not infer missing location, pricing, review ratings, or business hours.
+## Menu highlights
+
+Sample prices in CAD, not live quotes: California Roll $4.50; Dynamite Roll $5.50; Spicy Salmon Roll $4.00; Yam Roll $6.00; Roll & Nigiri Combo $19.50; Sashimi & Roll Combo $15.00; Dinner for Two Combo $28.00. Red Dragon Roll price is not supplied. Call to confirm current prices, ingredients, availability, and the full menu.
+
+## Sources and limitations
+
+Business information and menu highlights were supplied by the site owner on October 23, 2026; they were not independently checked against the restaurant's website because research access was blocked. Food images are AI-generated illustrations. No review rating, customer quotation, guaranteed ten-minute pickup, or complimentary tea/soup offer is asserted. No online checkout or reservation system is connected. Read reviews and listing updates on Google.
