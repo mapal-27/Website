@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /Website/kwao-thai/
+
+Sitemap: https://mapal-27.github.io/Website/kwao-thai/sitemap.xml
