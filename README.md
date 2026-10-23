@@ -1,4 +1,4 @@
-# Sushi Inn
+# Sushi Den
 
 A casual, minimal restaurant website with a scrolling homepage and a separate menu page. Built by adapting the layout and responsive grid from [Bootstrap 5.3.3's Album example](https://github.com/twbs/bootstrap/blob/v5.3.3/site/content/docs/5.3/examples/album/index.html), with Bootstrap and Lucide icons. The original template and MIT license are retained in `template/`.
 

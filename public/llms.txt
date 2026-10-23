@@ -1,6 +1,6 @@
-# Sushi Inn Japanese Restaurant
+# Sushi Den Japanese Restaurant
 
-> Website for Sushi Inn Japanese Restaurant. The current menu and photographs are illustrative; restaurant details are awaiting confirmation.
+> Website for Sushi Den Japanese Restaurant. The current menu and photographs are illustrative; restaurant details are awaiting confirmation.
 
 ## Pages
 
