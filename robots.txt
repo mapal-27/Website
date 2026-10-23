@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /Website/
+
+Sitemap: https://mapal-27.github.io/Website/sitemap.xml
