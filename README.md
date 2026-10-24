@@ -1,6 +1,6 @@
 # Kwao Thai restaurant concept
 
-Reuses the existing restaurant template, originally adapted from Bootstrap 5.3.3's MIT-licensed Album example. Upstream source/license are in `template/`; icons are Lucide. Keeps a minimal casual layout with distinct Why Us and Reviews sections and a separate menu/ordering page.
+Reuses the existing restaurant template, originally adapted from Bootstrap 5.3.3's MIT-licensed Album example. Upstream source/license are in `template/`; icons are Lucide. Keeps a minimal casual layout with distinct About, Why Us, and Reviews sections and a separate menu/ordering page.
 
 ## Run
 

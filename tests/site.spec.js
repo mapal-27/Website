@@ -16,6 +16,9 @@ test('homepage uses Kwao Thai content with independent sections and correct loca
   const why = await page.locator('#why-us').boundingBox();
   const reviews = await page.locator('#reviews').boundingBox();
   expect(reviews.y).toBeGreaterThanOrEqual(why.y + why.height - 1);
+  await expect(page.locator('#about')).toContainText('Family-run.');
+  await expect(page.locator('#about')).toContainText('Kwao (kaaow) means rice in Thai');
+  await expect(page.locator('#about')).toContainText('jasmine rice');
   await expect(page.locator('#visit')).toContainText('1207 A Esquimalt Road');
   await expect(page.locator('#visit')).toContainText('V9A 3P2');
   await expect(page.locator('#visit')).toContainText('11 AM–2:30 PM');
@@ -39,6 +42,8 @@ test('homepage uses Kwao Thai content with independent sections and correct loca
   await expect(page.locator('.spice-list li')).toHaveText(['Mild', 'Mild–Med', 'Med', 'Hot', 'Thai Hot / Extra Hot']);
   await expect(page.locator('#delivery')).toContainText('DoorDash and Localpass');
   await expect(page.locator('#dietary-title')).toBeVisible();
+  await expect(page.locator('.dietary-section')).toContainText('fish sauce');
+  await expect(page.locator('.dietary-section')).toContainText('Gluten-free requests?');
   await expect(page.locator('[data-menu-item]')).toHaveCount(52);
   await expect(page.locator('a[href*=".pdf"]')).toHaveCount(0);
   expect(errors).toEqual([]);
