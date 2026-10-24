@@ -1,0 +1,840 @@
+{
+  "currency": "CAD",
+  "source": "Menu text copied from kwaothai.com and supplied by the user on October 23, 2026. The source warns that its PDF is inaccurate.",
+  "categories": [
+    {
+      "id": "appetizers",
+      "name": "Appetizers & salads",
+      "note": "",
+      "items": [
+        {
+          "id": "1",
+          "number": 1,
+          "name": "Veggie Spring Rolls",
+          "description": "4 deep-fried rolls with carrot, cabbage, onion and glass noodles. Thai plum sauce on the side.",
+          "price": 12
+        },
+        {
+          "id": "2",
+          "number": 2,
+          "name": "Chicken Satay",
+          "description": "4 grilled chicken skewers with peanut sauce.",
+          "price": 15
+        },
+        {
+          "id": "3",
+          "number": 3,
+          "name": "Thai Green Papaya Salad (Som Tam)",
+          "description": "Papaya, carrot, green beans, peanuts, tomato and tamarind sauce. Choose your spice level.",
+          "price": 15,
+          "options": [
+            {
+              "label": "Salad",
+              "price": 15
+            },
+            {
+              "label": "Prawns (3 pieces)",
+              "price": 15
+            }
+          ]
+        },
+        {
+          "id": "4",
+          "number": 4,
+          "name": "Deep-Fried Wontons",
+          "description": "8 deep-fried wontons with plum sauce.",
+          "price": 14
+        },
+        {
+          "id": "5",
+          "number": 5,
+          "name": "Deep-Fried Tofu",
+          "description": "8 pieces with plum sauce and crushed peanuts.",
+          "price": 14
+        },
+        {
+          "id": "6",
+          "number": 6,
+          "name": "Lettuce Wrap",
+          "description": "Diced carrot, onion and red and green peppers, stir-fried in oyster- and soy-based sauce. Served with iceberg lettuce.",
+          "price": 15.5,
+          "options": [
+            {
+              "label": "Chicken, beef, pork, tofu or vegetables",
+              "price": 15.5
+            },
+            {
+              "label": "Prawns",
+              "price": 17.5
+            }
+          ]
+        },
+        {
+          "id": "8",
+          "number": 8,
+          "name": "Larb",
+          "description": "Your choice of chicken, beef or pork with red onion, kaffir lime leaves, green onion and cilantro. Choose your spice level.",
+          "price": 17
+        },
+        {
+          "id": "9",
+          "number": 9,
+          "name": "Kwao Thai Chicken Wings",
+          "description": "4 fried marinated chicken wings with tomato and sesame.",
+          "price": 15.5
+        },
+        {
+          "id": "10",
+          "number": 10,
+          "name": "Chicken Wings",
+          "description": "4 crispy chicken wings marinated in spices.",
+          "price": 14.5
+        },
+        {
+          "id": "11",
+          "number": 11,
+          "name": "Garlic Fried Spareribs",
+          "description": "Pork spareribs fried with golden garlic and cilantro.",
+          "price": 16.5
+        }
+      ]
+    },
+    {
+      "id": "soups",
+      "name": "Soups",
+      "note": "For Tom Kha and Tom Yum, confirm portion size when ordering.",
+      "items": [
+        {
+          "id": "12",
+          "number": 12,
+          "name": "Coconut Milk Soup (Tom Kha)",
+          "description": "Coconut milk with lemongrass, galangal, kaffir lime leaves, tomato, mushrooms, red onion and cilantro.",
+          "price": 10.5,
+          "options": [
+            {
+              "label": "Chicken or mixed vegetables",
+              "price": 10.5
+            },
+            {
+              "label": "Prawns",
+              "price": 12.5
+            }
+          ],
+          "note": "Confirm portion size with the restaurant."
+        },
+        {
+          "id": "13",
+          "number": 13,
+          "name": "Spicy Sour Soup (Tom Yum)",
+          "description": "Galangal, lemongrass, kaffir lime leaves, mushrooms, tomato, red onion, milk and cilantro.",
+          "price": 10.5,
+          "options": [
+            {
+              "label": "Chicken or mixed vegetables",
+              "price": 10.5
+            },
+            {
+              "label": "Prawns",
+              "price": 12.5
+            }
+          ],
+          "note": "Confirm portion size with the restaurant."
+        },
+        {
+          "id": "14",
+          "number": 14,
+          "name": "Tom Ka Noodle Soup",
+          "description": "Rice noodles, mushrooms, tomato, red onion, lemongrass, galangal and kaffir lime leaves in coconut milk broth.",
+          "price": 20.5,
+          "options": [
+            {
+              "label": "Chicken, tofu or vegetables",
+              "price": 20.5
+            },
+            {
+              "label": "Prawns (8 pieces)",
+              "price": 22.5
+            }
+          ]
+        },
+        {
+          "id": "15",
+          "number": 15,
+          "name": "Tom Yum Noodle Soup",
+          "description": "Rice noodles with mushrooms, tomato, red onion, green beans, bean sprouts, peanuts and cilantro.",
+          "price": 20.5,
+          "options": [
+            {
+              "label": "Chicken, beef, pork or tofu",
+              "price": 20.5
+            },
+            {
+              "label": "Prawns (8 pieces)",
+              "price": 22.5
+            }
+          ]
+        },
+        {
+          "id": "16",
+          "number": 16,
+          "name": "Chicken Wonton Soup",
+          "description": "Chicken wontons with carrot, yellow and green onion, celery and Chinese cabbage, served with bean sprouts.",
+          "price": 16
+        }
+      ]
+    },
+    {
+      "id": "noodles",
+      "name": "Noodles",
+      "note": "Noodle dishes may contain wheat and nuts. Please discuss allergies when ordering.",
+      "items": [
+        {
+          "id": "17",
+          "number": 17,
+          "name": "Pad Thai",
+          "description": "Rice noodles with tamarind sauce, tofu, egg, carrot, bean sprouts and green onion, topped with ground peanuts and lime.",
+          "price": 19,
+          "options": [
+            {
+              "label": "Chicken, beef, pork or vegetables",
+              "price": 19
+            },
+            {
+              "label": "Prawns (8 pieces)",
+              "price": 21
+            }
+          ]
+        },
+        {
+          "id": "18",
+          "number": 18,
+          "name": "Pad See-Ew",
+          "description": "Rice noodles with carrot, Chinese broccoli and egg.",
+          "price": 19,
+          "options": [
+            {
+              "label": "Chicken, beef, pork, tofu or vegetables",
+              "price": 19
+            },
+            {
+              "label": "Prawns (8 pieces)",
+              "price": 21
+            }
+          ]
+        },
+        {
+          "id": "19",
+          "number": 19,
+          "name": "Drunken Noodles",
+          "description": "Rice noodles with bamboo shoots, red and green peppers, baby corn, egg and basil.",
+          "price": 19,
+          "options": [
+            {
+              "label": "Chicken, beef, pork, tofu or vegetables",
+              "price": 19
+            },
+            {
+              "label": "Prawns (8 pieces)",
+              "price": 21
+            }
+          ]
+        },
+        {
+          "id": "20",
+          "number": 20,
+          "name": "Stir-Fried Egg Noodles",
+          "description": "Egg noodles with onion, red and green peppers and basil in sweet chili shrimp paste.",
+          "price": 19,
+          "options": [
+            {
+              "label": "Chicken, beef or pork",
+              "price": 19
+            },
+            {
+              "label": "Prawns (8 pieces)",
+              "price": 21
+            }
+          ]
+        },
+        {
+          "id": "21",
+          "number": 21,
+          "name": "Pad Woon Sen",
+          "description": "Glass noodles with tomato, celery, onion, carrot, green onion, su choy and egg.",
+          "price": 19,
+          "options": [
+            {
+              "label": "Chicken, beef, pork, tofu or vegetables",
+              "price": 19
+            },
+            {
+              "label": "Prawns (8 pieces)",
+              "price": 21
+            }
+          ]
+        },
+        {
+          "id": "22",
+          "number": 22,
+          "name": "Pad Kee Mao Woon Sen",
+          "description": "Glass noodles with bamboo shoots, red and green peppers, Thai basil and egg.",
+          "price": 19,
+          "options": [
+            {
+              "label": "Chicken, beef, pork, tofu or vegetables",
+              "price": 19
+            },
+            {
+              "label": "Prawns (8 pieces)",
+              "price": 21
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rice",
+      "name": "Fried rice",
+      "note": "",
+      "items": [
+        {
+          "id": "23",
+          "number": 23,
+          "name": "Fried Rice",
+          "description": "Fried rice with egg, carrot, tomato, onion and green onion, with lime on the side.",
+          "price": 19,
+          "options": [
+            {
+              "label": "Chicken, beef, pork or vegetables",
+              "price": 19
+            },
+            {
+              "label": "Prawns (8 pieces)",
+              "price": 21
+            }
+          ]
+        },
+        {
+          "id": "24",
+          "number": 24,
+          "name": "Pineapple Fried Rice",
+          "description": "Fried rice with egg, pineapple, carrot, snow peas, raisins and cashew nuts.",
+          "options": [
+            {
+              "label": "Chicken, beef, pork or vegetables",
+              "price": null
+            },
+            {
+              "label": "Prawns (8 pieces)",
+              "price": 21
+            }
+          ],
+          "note": "Please call to confirm the base price.",
+          "sourcePriceConflict": [
+            18,
+            19
+          ]
+        },
+        {
+          "id": "25",
+          "number": 25,
+          "name": "Thai Basil Fried Rice",
+          "description": "Fried rice with egg, green beans, red and green peppers and Thai sweet basil.",
+          "price": 19,
+          "options": [
+            {
+              "label": "Chicken, beef, pork or tofu",
+              "price": 19
+            },
+            {
+              "label": "Prawns (8 pieces)",
+              "price": 21
+            }
+          ]
+        },
+        {
+          "id": "26",
+          "number": 26,
+          "name": "Kwao Thai Fried Rice",
+          "description": "Fried rice with egg, carrot, snow peas, onion and red and green peppers.",
+          "price": 19,
+          "options": [
+            {
+              "label": "Chicken, beef, pork, tofu or vegetables",
+              "price": 19
+            },
+            {
+              "label": "Prawns (8 pieces)",
+              "price": 21
+            }
+          ]
+        },
+        {
+          "id": "27",
+          "number": 27,
+          "name": "Fried Rice Nam Prig Pao",
+          "description": "Fried rice with chili paste, egg, onion, green onion, red and green peppers, cashew nuts and basil.",
+          "price": 19,
+          "options": [
+            {
+              "label": "Chicken, beef, pork, tofu or vegetables",
+              "price": 19
+            },
+            {
+              "label": "Prawns (8 pieces)",
+              "price": 21
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "curries",
+      "name": "Curries",
+      "note": "Coconut milk-based curries. Ask the restaurant about ingredients and dietary requirements.",
+      "items": [
+        {
+          "id": "28",
+          "number": 28,
+          "name": "Red Curry",
+          "description": "Red curry paste in coconut milk with bamboo shoots, zucchini, red and green peppers and sweet basil.",
+          "price": 19.5,
+          "options": [
+            {
+              "label": "Chicken, beef, pork or tofu",
+              "price": 19.5
+            },
+            {
+              "label": "Prawns (8 pieces)",
+              "price": 21.5
+            }
+          ]
+        },
+        {
+          "id": "29",
+          "number": 29,
+          "name": "Green Curry",
+          "description": "Green curry paste in coconut milk with eggplant, green beans, baby corn, red and green peppers and sweet basil.",
+          "price": 19.5,
+          "options": [
+            {
+              "label": "Chicken, beef, pork, tofu or vegetables",
+              "price": 19.5
+            },
+            {
+              "label": "Prawns (8 pieces)",
+              "price": 21.5
+            }
+          ]
+        },
+        {
+          "id": "30",
+          "number": 30,
+          "name": "Panang Curry",
+          "description": "Panang curry paste in coconut milk with snow peas, kaffir lime leaves and red and green peppers.",
+          "price": 19.5,
+          "options": [
+            {
+              "label": "Chicken, beef, pork, tofu or vegetables",
+              "price": 19.5
+            },
+            {
+              "label": "Prawns (8 pieces)",
+              "price": 21.5
+            }
+          ]
+        },
+        {
+          "id": "31",
+          "number": 31,
+          "name": "Matsaman Curry",
+          "description": "Coconut milk curry with onion, potato and cashew nuts.",
+          "price": 19.5,
+          "options": [
+            {
+              "label": "Chicken, beef, pork, tofu or vegetables",
+              "price": 19.5
+            },
+            {
+              "label": "Prawns",
+              "price": 21.5
+            }
+          ]
+        },
+        {
+          "id": "32",
+          "number": 32,
+          "name": "Yellow Curry",
+          "description": "Sweet yellow curry paste in coconut milk with potatoes, onion, carrot and pineapple.",
+          "price": 19.5,
+          "options": [
+            {
+              "label": "Chicken, beef, pork, tofu or vegetables",
+              "price": 19.5
+            },
+            {
+              "label": "Prawns",
+              "price": 21.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stir-fries",
+      "name": "Stir-fries",
+      "note": "",
+      "items": [
+        {
+          "id": "33",
+          "number": 33,
+          "name": "Stir-Fried Cashew Nuts",
+          "description": "Roasted cashews, onion, carrot, red and green peppers and green onion, with sweet chili shrimp paste.",
+          "price": 19,
+          "options": [
+            {
+              "label": "Chicken, beef, pork, tofu or vegetables",
+              "price": 19
+            },
+            {
+              "label": "Prawns (8 pieces)",
+              "price": 21
+            }
+          ]
+        },
+        {
+          "id": "34",
+          "number": 34,
+          "name": "Sweet & Sour",
+          "description": "Sweet and sour sauce with onion, pineapple, cucumber, tomato, carrot, red and green peppers and green onion.",
+          "price": 19,
+          "options": [
+            {
+              "label": "Chicken, beef, pork, tofu or vegetables",
+              "price": 19
+            },
+            {
+              "label": "Prawns (8 pieces)",
+              "price": 21
+            }
+          ]
+        },
+        {
+          "id": "35",
+          "number": 35,
+          "name": "Ginger Stir-Fry",
+          "description": "Fresh ginger, onion, green onion, white and black mushrooms and red and green peppers.",
+          "price": 19,
+          "options": [
+            {
+              "label": "Chicken, beef, pork, tofu or vegetables",
+              "price": 19
+            },
+            {
+              "label": "Prawns (8 pieces)",
+              "price": 21
+            }
+          ]
+        },
+        {
+          "id": "36",
+          "number": 36,
+          "name": "Spicy Stir-Fry",
+          "description": "Long beans, pickled rhizome, red and green peppers and basil.",
+          "price": 19,
+          "options": [
+            {
+              "label": "Chicken, beef, pork, tofu or vegetables",
+              "price": 19
+            },
+            {
+              "label": "Prawns (8 pieces)",
+              "price": 21
+            }
+          ]
+        },
+        {
+          "id": "37",
+          "number": 37,
+          "name": "Stir-Fried Mixed Vegetables",
+          "description": "Cauliflower, broccoli, carrot, celery, white mushrooms, baby corn and chu choy.",
+          "price": 19,
+          "options": [
+            {
+              "label": "Chicken, beef, pork, tofu or vegetables",
+              "price": 19
+            },
+            {
+              "label": "Prawns (8 pieces)",
+              "price": 21
+            }
+          ]
+        },
+        {
+          "id": "38",
+          "number": 38,
+          "name": "Stir-Fried Basil",
+          "description": "Thai basil with baby corn, bamboo shoots, green beans and red and green peppers.",
+          "price": 19,
+          "options": [
+            {
+              "label": "Chicken, beef, pork, tofu or vegetables",
+              "price": 19
+            },
+            {
+              "label": "Prawns (8 pieces)",
+              "price": 21
+            }
+          ]
+        },
+        {
+          "id": "39",
+          "number": 39,
+          "name": "Stir-Fried Broccoli",
+          "description": "Broccoli with fresh ginger and carrot.",
+          "price": 19,
+          "options": [
+            {
+              "label": "Chicken, beef, pork, tofu or vegetables",
+              "price": 19
+            },
+            {
+              "label": "Prawns (8 pieces)",
+              "price": 21
+            }
+          ]
+        },
+        {
+          "id": "41",
+          "number": 41,
+          "name": "Stir-Fried Prig King",
+          "description": "Green beans, ginger, basil, red and green peppers, chili paste and kaffir lime.",
+          "price": 19,
+          "options": [
+            {
+              "label": "Chicken, beef, pork, tofu or vegetables",
+              "price": 19
+            },
+            {
+              "label": "Prawns (8 pieces)",
+              "price": 21
+            }
+          ]
+        },
+        {
+          "id": "43",
+          "number": 43,
+          "name": "Stir-Fried Eggplant",
+          "description": "Eggplant, red and green peppers, basil and chili paste.",
+          "price": 19,
+          "options": [
+            {
+              "label": "Chicken, beef, pork, tofu or vegetables",
+              "price": 19
+            },
+            {
+              "label": "Prawns (8 pieces)",
+              "price": 21
+            }
+          ]
+        },
+        {
+          "id": "47",
+          "number": 47,
+          "name": "Pra Ram Long Song",
+          "description": "Broccoli, cauliflower, carrot, celery and su choy with peanut sauce.",
+          "price": 19,
+          "options": [
+            {
+              "label": "Chicken, beef, pork, tofu or vegetables",
+              "price": 19
+            },
+            {
+              "label": "Prawns (8 pieces)",
+              "price": 21
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "specials",
+      "name": "Chef specials",
+      "note": "",
+      "items": [
+        {
+          "id": "50",
+          "number": 50,
+          "name": "Lamb Pad King",
+          "description": "Lamb stir-fried with fresh ginger, celery, onion, green onion, red and green peppers and white mushrooms.",
+          "note": "Please call to confirm the price.",
+          "sourcePriceConflict": [
+            21.5,
+            22.5
+          ]
+        },
+        {
+          "id": "51",
+          "number": 51,
+          "name": "Lamb Pad Prig Thai Dum",
+          "description": "Lamb stir-fried with red and green peppers, celery, onion and black pepper.",
+          "note": "Please call to confirm the price.",
+          "sourcePriceConflict": [
+            21.5,
+            22.5
+          ]
+        },
+        {
+          "id": "lamb-massaman",
+          "number": null,
+          "name": "Lamb Massaman Curry",
+          "description": "Coconut milk curry with lamb, onion, potato and cashew nuts.",
+          "price": 22.5
+        }
+      ]
+    },
+    {
+      "id": "sides",
+      "name": "Sides",
+      "note": "",
+      "items": [
+        {
+          "id": "52",
+          "number": 52,
+          "name": "Steamed Rice",
+          "description": "",
+          "price": 5,
+          "options": [
+            {
+              "label": "Small",
+              "price": 5
+            },
+            {
+              "label": "Large",
+              "price": 8
+            }
+          ]
+        },
+        {
+          "id": "53",
+          "number": 53,
+          "name": "Coconut Rice",
+          "description": "",
+          "price": 6,
+          "options": [
+            {
+              "label": "Small",
+              "price": 6
+            },
+            {
+              "label": "Large",
+              "price": 9
+            }
+          ]
+        },
+        {
+          "id": "54",
+          "number": 54,
+          "name": "Steamed Vegetables",
+          "description": "",
+          "price": 5,
+          "options": [
+            {
+              "label": "Small",
+              "price": 5
+            },
+            {
+              "label": "Large",
+              "price": 9
+            }
+          ]
+        },
+        {
+          "id": "55",
+          "number": 55,
+          "name": "Steamed Noodles",
+          "description": "",
+          "price": 5,
+          "options": [
+            {
+              "label": "Small",
+              "price": 5
+            },
+            {
+              "label": "Large",
+              "price": 8
+            }
+          ]
+        },
+        {
+          "id": "56",
+          "number": 56,
+          "name": "Curry Sauce",
+          "description": "",
+          "price": 7,
+          "options": [
+            {
+              "label": "Small",
+              "price": 7
+            },
+            {
+              "label": "Large",
+              "price": 10
+            }
+          ]
+        },
+        {
+          "id": "57",
+          "number": 57,
+          "name": "Peanut Sauce",
+          "description": "",
+          "price": 5,
+          "options": [
+            {
+              "label": "Small",
+              "price": 5
+            },
+            {
+              "label": "Large",
+              "price": 8
+            }
+          ]
+        },
+        {
+          "id": "59",
+          "number": 59,
+          "name": "Pad Thai Sauce",
+          "description": "",
+          "price": 7,
+          "options": [
+            {
+              "label": "Small",
+              "price": 7
+            },
+            {
+              "label": "Large",
+              "price": 10
+            }
+          ]
+        },
+        {
+          "id": "60",
+          "number": 60,
+          "name": "Chili Fish Sauce",
+          "description": "",
+          "price": 2.5,
+          "options": [
+            {
+              "label": "Small",
+              "price": 2.5
+            },
+            {
+              "label": "Large",
+              "price": 4
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

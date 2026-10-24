@@ -36,10 +36,10 @@ test('homepage uses Kwao Thai content with independent sections and correct loca
   await page.screenshot({ path: 'test-results/kwao-home-desktop.png', fullPage: true });
   await page.getByRole('navigation', { name: 'Main navigation' }).getByRole('link', { name: 'Menu & ordering' }).click();
   await expect(page).toHaveURL(/menu.html$/);
-  await expect(page.locator('.spice-list li')).toHaveText(['Mild', 'Mild–Med', 'Med', 'Hot', 'Thai Hot']);
+  await expect(page.locator('.spice-list li')).toHaveText(['Mild', 'Mild–Med', 'Med', 'Hot', 'Thai Hot / Extra Hot']);
   await expect(page.locator('#delivery')).toContainText('DoorDash and Localpass');
   await expect(page.locator('#dietary-title')).toBeVisible();
-  await expect(page.locator('.current-menu').getByRole('link', { name: /Restaurant website/ })).toHaveAttribute('href', official);
+  await expect(page.locator('[data-menu-item]')).toHaveCount(52);
   await expect(page.locator('a[href*=".pdf"]')).toHaveCount(0);
   expect(errors).toEqual([]);
   await page.screenshot({ path: 'test-results/kwao-menu-desktop.png', fullPage: true });
@@ -100,7 +100,7 @@ test('SEO identifies the correct restaurant, preserves split hours, and treats t
     expect(restaurant.openingHoursSpecification[1].opens).toBe('16:30');
     expect(restaurant.openingHoursSpecification[0].dayOfWeek).not.toContain('Monday');
     expect(restaurant).not.toHaveProperty('aggregateRating');
-    expect(restaurant).not.toHaveProperty('hasMenu');
+    expect(restaurant.hasMenu['@id']).toBe(base + 'menu.html#menu');
     await expect(page.locator('meta[property="og:image"]')).toHaveAttribute('content', base + 'images/thai-sheet.png');
     await expect(page.getByRole('navigation', { name: 'Main navigation' }).getByRole('link', { name: 'Call to order' })).toHaveAttribute('href', phone);
   }
@@ -108,7 +108,7 @@ test('SEO identifies the correct restaurant, preserves split hours, and treats t
   const sitemap = await page.request.get('/sitemap.xml');
   expect(await sitemap.text()).toContain(`<loc>${base}</loc>`);
   const llms = await page.request.get('/llms.txt');
-  expect(await llms.text()).toContain('No dish names, prices');
+  expect(await llms.text()).toContain('all 52 supplied items');
   expect(await llms.text()).not.toContain('Sushi Den');
 });
 
@@ -119,4 +119,60 @@ test('map only loads on request and points to Kwao Thai', async ({ page }) => {
   await page.getByRole('button', { name: 'Show location on map' }).click();
   await expect(page.locator('iframe')).toHaveAttribute('src', /Kwao\+Thai\+1207\+A\+Esquimalt/);
   await expect(page.locator('iframe')).toHaveAttribute('title', 'Kwao Thai at 1207 A Esquimalt Road, Victoria');
+});
+
+
+test('menu filters, search, direct links, prices, and source ambiguities work', async ({ page }) => {
+  await page.goto('/menu.html');
+  const visibleItems = page.locator('[data-menu-item]:visible');
+  await expect(visibleItems).toHaveCount(52);
+  for (const [label, count] of [['Appetizers & salads', 10], ['Soups', 5], ['Noodles', 6], ['Fried rice', 5], ['Curries', 5], ['Stir-fries', 10], ['Chef specials', 3], ['Sides', 8], ['All', 52]]) {
+    await page.getByRole('button', { name: label, exact: true }).click();
+    await expect(visibleItems).toHaveCount(count);
+    await expect(page.getByRole('button', { name: label, exact: true })).toHaveAttribute('aria-pressed', 'true');
+  }
+  await page.getByLabel('Find a dish', { exact: true }).fill('Pad Thai');
+  await expect(visibleItems).toHaveCount(2);
+  await expect(page.locator('#dish-17')).toContainText('$19.00');
+  await expect(page.locator('#dish-17')).toContainText('$21.00');
+  await page.getByLabel('Clear search', { exact: true }).click();
+  await expect(visibleItems).toHaveCount(52);
+  await page.getByLabel('Find a dish', { exact: true }).fill('no-such-dish');
+  await expect(visibleItems).toHaveCount(0);
+  await expect(page.getByRole('heading', { name: 'No dishes found.' })).toBeVisible();
+  await page.getByRole('button', { name: 'Show full menu' }).click();
+  await expect(visibleItems).toHaveCount(52);
+  await expect(page.locator('#dish-24 .entry-price')).toHaveText('Call to confirm');
+  await expect(page.locator('#dish-24')).toContainText('$21.00');
+  for (const id of ['50', '51']) {
+    await expect(page.locator('#dish-' + id + ' .entry-price')).toHaveText('Call to confirm');
+    await expect(page.locator('#dish-' + id)).not.toContainText('$21.50');
+    await expect(page.locator('#dish-' + id)).not.toContainText('$22.50');
+  }
+  await expect(page.locator('#dish-53')).toContainText('Small');
+  await expect(page.locator('#dish-53')).toContainText('$6.00');
+  await expect(page.locator('#dish-53')).toContainText('$9.00');
+  const schema = JSON.parse(await page.locator('script[type="application/ld+json"]').textContent());
+  const menu = schema['@graph'].find(entity => entity['@type'] === 'Menu');
+  const dishes = menu.hasMenuSection.flatMap(section => section.hasMenuItem);
+  expect(dishes).toHaveLength(52);
+  expect(dishes.find(dish => dish.name === 'Lamb Pad King')).not.toHaveProperty('offers');
+  await page.goto('/');
+  await page.getByRole('link', { name: 'Pad Thai', exact: true }).click();
+  await expect(page).toHaveURL(/category=noodles#dish-17$/);
+  await expect(visibleItems).toHaveCount(6);
+  await expect(page.locator('#dish-17')).toBeVisible();
+  await page.goto('/menu.html?category=invalid&q=Panang');
+  await expect(visibleItems).toHaveCount(1);
+});
+
+test('all menu items and prices remain available without JavaScript', async ({ browser }) => {
+  const context = await browser.newContext({ javaScriptEnabled: false, viewport: { width: 390, height: 844 } });
+  const page = await context.newPage();
+  await page.goto('http://127.0.0.1:4173/menu.html');
+  await expect(page.locator('[data-menu-item]:visible')).toHaveCount(52);
+  await expect(page.locator('#dish-17')).toContainText('$19.00');
+  await expect(page.getByRole('navigation', { name: 'Quick actions' }).getByRole('link', { name: 'Call to order' })).toHaveAttribute('href', phone);
+  await expect(page.locator('[data-menu-controls]')).toBeHidden();
+  await context.close();
 });

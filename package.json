@@ -7,8 +7,17 @@
     "dev": "vite --host 0.0.0.0",
     "build": "vite build",
     "preview": "vite preview --host 0.0.0.0",
-    "test": "playwright test"
+    "test": "playwright test",
+    "menu:generate": "node scripts/render-menu.mjs",
+    "prebuild": "npm run menu:generate",
+    "predev": "npm run menu:generate"
   },
-  "dependencies": {"bootstrap": "5.3.3", "lucide": "0.468.0"},
-  "devDependencies": {"vite": "6.4.1", "@playwright/test": "1.56.1"}
+  "dependencies": {
+    "bootstrap": "5.3.3",
+    "lucide": "0.468.0"
+  },
+  "devDependencies": {
+    "vite": "6.4.1",
+    "@playwright/test": "1.56.1"
+  }
 }

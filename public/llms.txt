@@ -21,9 +21,9 @@ The site owner supplied copied homepage text and a screenshot from https://www.k
 ## Pages
 
 - [Concept homepage](https://mapal-27.github.io/Website/kwao-thai/)
-- [Menu and ordering guide](https://mapal-27.github.io/Website/kwao-thai/menu.html)
+- [Menu and ordering](https://mapal-27.github.io/Website/kwao-thai/menu.html)
 - [Official restaurant website](https://www.kwaothai.com)
 
 ## Limitations
 
-No dish names, prices, full menu, customer review text, review ratings, email address, or direct ordering-provider URLs were supplied. None are invented here. Illustrative Thai cuisine photos are AI-generated and do not depict confirmed Kwao Thai dishes. The menu page links to the official website for current menu information. This concept is marked noindex pending review; it is not intended to compete with the official site in search results.
+The user supplied the website menu text on October 23, 2026. The menu page transcribes all 52 supplied items across 8 categories, with protein and portion options in CAD. The source explicitly warns its PDF is inaccurate; this concept uses the website text instead. Pineapple Fried Rice lists conflicting base prices ($18/$19); Lamb Pad King and Lamb Pad Prig Thai Dum each list $21.50/$22.50. Their conflicting base prices are not presented as confirmed offers; customers are asked to call. Tom Kha and Tom Yum portion descriptions also conflict, so portion sizes are not guessed. No lunch-special dishes were provided despite a Lunch Special heading, so none are invented. Customer review text, ratings, email, and direct ordering-provider URLs remain unavailable. Illustrative Thai cuisine photos are AI-generated and do not depict confirmed Kwao Thai dishes. The menu is rendered as searchable HTML, works without JavaScript, and does not use a PDF. Confirm current prices and availability by phone. This concept is marked noindex pending review; it is not intended to compete with the official site in search results.
