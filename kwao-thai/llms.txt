@@ -6,6 +6,10 @@
 
 The site owner supplied copied homepage text and a screenshot from https://www.kwaothai.com on October 23, 2026. The source website was not independently retrieved in this environment.
 
+## Family story
+
+The user supplied the restaurant’s About page: Kwao Thai is a family-run business serving authentic Thai food with care. Kwao (kaaow) means rice in Thai; the restaurant serves fragrant jasmine rice. Its cooking balances salty, sour, sweet and spicy flavors, and shared dishes are part of the dining tradition. Vegan customers should ask to leave out fish sauce and confirm other ingredients. Rice being gluten-free does not establish that all dishes, sauces, or preparation are gluten-free.
+
 ## Supplied business information
 
 - Name: Kwao Thai Restaurant.
